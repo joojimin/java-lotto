@@ -40,11 +40,7 @@ public final class LottoGenerator {
 				.orElse(Collections.emptyList())
 				.stream()
 				.map(LottoGenerator::makeLottoNumbers)
-				.forEach(this::add);
-	}
-
-	private void add(final LottoNumbers lottoNumbers) {
-		lottoNumbersFactory.add(lottoNumbers);
+				.forEach(lottoNumbersFactory::add);
 	}
 
 	public void generateAutoLotto(final LottoCount lottoCount) {
